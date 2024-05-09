@@ -1,0 +1,36 @@
+/* Import Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Define additional utility class */
+@layer utilities {
+  .duration-high {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+/* Define animation keyframes */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the spinning animation to elements with the .spin class */
+.spin {
+  animation: spin 40s linear infinite;
+}
+
+/* Define smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Define selection style */
+::selection {
+  @apply bg-primary text-white;
+}
